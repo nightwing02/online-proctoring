@@ -1,0 +1,117 @@
+.monitoring-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.monitoring-panel h2 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.monitoring-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.camera-container {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  height: 480px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+}
+
+.camera-feed, .processed-feed {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.loading-feed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f3f3f3;
+  color: #7f8c8d;
+}
+
+.monitoring-controls {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.monitoring-panel.cheating-detected .camera-container {
+  box-shadow: 0 0 0 3px #e74c3c, 0 3px 15px rgba(0,0,0,0.1);
+  animation: pulse-border 1.5s infinite;
+}
+
+@keyframes pulse-border {
+  0% {
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 1), 0 3px 15px rgba(0,0,0,0.1);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(231, 76, 60, 0.5), 0 3px 15px rgba(0,0,0,0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 1), 0 3px 15px rgba(0,0,0,0.1);
+  }
+}
+
+.cheating-alert {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(231, 76, 60, 0.9);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+/* For MonitoringPanel.css */
+.status-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.monitoring-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+/* General styling improvements */
+.message-container {
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.message {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.message.alert {
+  color: #f44336;
+  font-weight: bold;
+}

@@ -1,0 +1,103 @@
+.calibration-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.calibration-panel h2 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.calibration-progress {
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #3498db;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  text-align: right;
+}
+
+.calibration-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.camera-container {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.camera-feed {
+  width: 100%;
+  display: block;
+}
+
+.instruction-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.target-point {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(231, 76, 60, 0.7);
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.7);
+  position: absolute;
+}
+
+.instruction-text {
+  position: absolute;
+  bottom: 20px;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.calibration-controls {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+/* For CalibrationPanel.css */
+.status-text {
+  margin-top: 10px;
+  color: #666;
+  font-size: 14px;
+}
